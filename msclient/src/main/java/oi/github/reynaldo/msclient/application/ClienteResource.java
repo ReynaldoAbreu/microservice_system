@@ -1,22 +1,25 @@
 package oi.github.reynaldo.msclient.application;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import oi.github.reynaldo.msclient.application.representation.ClienteServeceRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import java.net.URI;
 
 @RestController
 @RequestMapping("clientes")
 @RequiredArgsConstructor
+@Slf4j
 public class ClienteResource {
 
     private final ClienteServece clienteServece;
 
     @GetMapping
     public String status(){
+
+        log.info("Obtendo status do microservice de cliente");
         return "ok";
     }
 
