@@ -1,4 +1,4 @@
-package oi.github.reynaldo.mscartoes.infra;
+package oi.github.reynaldo.mscartoes.infra.repository;
 
 import oi.github.reynaldo.mscartoes.domain.Cartao;
 import org.springframework.data.jpa.repository.JpaRepository;

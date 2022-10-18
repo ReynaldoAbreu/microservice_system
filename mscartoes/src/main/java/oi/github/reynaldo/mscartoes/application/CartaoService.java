@@ -2,7 +2,7 @@ package oi.github.reynaldo.mscartoes.application;
 
 import lombok.RequiredArgsConstructor;
 import oi.github.reynaldo.mscartoes.domain.Cartao;
-import oi.github.reynaldo.mscartoes.infra.CartaoRepository;
+import oi.github.reynaldo.mscartoes.infra.repository.CartaoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
