@@ -3,7 +3,6 @@ package oi.github.reynaldo.mscartoes.application;
 import lombok.RequiredArgsConstructor;
 import oi.github.reynaldo.mscartoes.domain.CartaoCliente;
 import oi.github.reynaldo.mscartoes.infra.repository.CartaoClienteRepository;
-import oi.github.reynaldo.mscartoes.infra.repository.CartaoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
