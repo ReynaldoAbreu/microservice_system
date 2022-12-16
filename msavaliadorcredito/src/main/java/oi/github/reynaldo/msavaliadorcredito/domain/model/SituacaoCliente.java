@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 public class SituacaoCliente {
 
-    private DadosCliente dadosCliente;
-    private List<CartaoCliente> cartaoCliente;
+    private DadosCliente cliente;
+    private List<CartaoCliente> cartoes;
 
 }

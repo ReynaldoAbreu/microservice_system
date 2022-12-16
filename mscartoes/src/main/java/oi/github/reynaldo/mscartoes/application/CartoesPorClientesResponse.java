@@ -19,6 +19,8 @@ public class CartoesPorClientesResponse {
         return  new CartoesPorClientesResponse(
                 model.getCartao().getName(),
                 model.getCartao().getBandeira().toString(),
-                model.getCartao().getLimiteBasico());
+                model.getLimite()
+        );
     }
+
 }

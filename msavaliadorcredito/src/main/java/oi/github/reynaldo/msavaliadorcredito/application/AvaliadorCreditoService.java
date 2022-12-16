@@ -36,8 +36,8 @@ public class AvaliadorCreditoService {
             ResponseEntity<List<CartaoCliente>> cartaoClienteResponse = cartaoResourceClient.getCartoesbyCliente(cpf);
             return SituacaoCliente
                     .builder()
-                    .dadosCliente(dadosClienteResponse.getBody())
-                    .cartaoCliente(cartaoClienteResponse.getBody())
+                    .cliente(dadosClienteResponse.getBody())
+                    .cartoes(cartaoClienteResponse.getBody())
                     .build();
         }catch (FeignException.FeignClientException e){
             int status = e.status();

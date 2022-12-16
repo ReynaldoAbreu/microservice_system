@@ -1,9 +1,8 @@
 package oi.github.reynaldo.mscartoes.infra.mqueue;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import oi.github.reynaldo.mscartoes.domain.Cartao;
 import oi.github.reynaldo.mscartoes.domain.CartaoCliente;
 import oi.github.reynaldo.mscartoes.domain.DadoSolicitacaoEmissaoCartao;
@@ -15,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class EmissaoCartaoSubscriber {
 
     private final CartaoRepository cartaoRepository;
@@ -37,12 +37,9 @@ public class EmissaoCartaoSubscriber {
             cartaoClienteRepository.save(cartaoCliente);
 
         }catch (Exception e){
-            e.printStackTrace();
+            log.info("Erro ao receber solicitacao de emissao de cartoes {} ", e.getMessage());
         }
 
-
-
     }
-
 
 }
